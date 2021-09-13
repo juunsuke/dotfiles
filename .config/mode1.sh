@@ -1,2 +1,2 @@
-xrandr --output HDMI-A-0 --mode 1920x1080 --rate 120
+xrandr --output HDMI-A-0 --mode 3840x2160 --rate 60
 nitrogen --restore

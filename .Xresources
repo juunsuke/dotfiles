@@ -7,6 +7,6 @@ XTerm.vt100.scrollbar.width: 8
 XTerm.vt100.rightScrollBar: true
 XTerm.vt100.foreground: gray
 XTerm.vt100.background: black
-XTerm.vt100.font: -*-terminus-medium-r-normal-*-20-*-*-*-*-*-*
+XTerm.vt100.font: -*-terminus-medium-r-normal-*-24-*-*-*-*-*-*
 
 
