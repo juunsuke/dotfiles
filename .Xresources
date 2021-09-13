@@ -1,0 +1,12 @@
+Xft.dpi: 96
+
+XTerm.termName: xterm-256color
+XTerm.vt100.saveLines: 16384
+XTerm.vt100.scrollBar: true
+XTerm.vt100.scrollbar.width: 8
+XTerm.vt100.rightScrollBar: true
+XTerm.vt100.foreground: gray
+XTerm.vt100.background: black
+XTerm.vt100.font: -*-terminus-medium-r-normal-*-20-*-*-*-*-*-*
+
+

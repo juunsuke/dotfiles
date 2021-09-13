@@ -1,0 +1,58 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+		markup = "pango"
+        colors = true
+        interval = 1
+}
+
+order += "disk /"
+order += "disk /z"
+order += "cpu_usage"
+order += "cpu_temperature 0"
+order += "cpu_temperature 1"
+#order += "load"
+order += "tztime date"
+order += "tztime time"
+
+cpu_usage {
+		format = "<span color='#6090ff'>%usage</span>"
+}
+
+cpu_temperature 0 {
+		format = "<span color='#ff6030'>%degrees °C</span>"
+		path = "/sys/devices/platform/coretemp.0/hwmon/hwmon4/temp1_input"
+}
+
+cpu_temperature 1 {
+		format = "<span color='#ff6030'>%degrees °C</span>"
+		path = "/sys/class/drm/card0/device/hwmon/hwmon6/temp1_input"
+}
+
+tztime date {
+        format = "<span color='#FFFFFF'>%time</span>"
+        format_time = "%Y-%m-%d"
+}
+
+tztime time {
+        format = "<span color='#00FF00'>%time</span>"
+        format_time = "%H:%M"
+}
+
+load {
+        format = "<span color='#f7ca88'>%1min</span>, <span color='#f7caf8'>%5min</span>, <span color='#f7fa88'>%15min</span>"
+}
+
+disk "/" {
+        format = "<span color='#7cafc2'>%avail</span>"
+}
+
+disk "/z" {
+        format = "<span color='#7cffc2'>%avail</span>"
+}
