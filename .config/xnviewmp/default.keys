@@ -322,6 +322,6 @@ cmd_userFilter
 cmd_vignetting 
 cmd_wallpaper 
 cmd_watermark 
-cmd_zoom100 *
+cmd_zoom100 Z
 cmd_zoomIn +
 cmd_zoomOut -

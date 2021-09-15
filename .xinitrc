@@ -13,6 +13,8 @@ solaar -w hide &
 
 pulseaudio -D
 
+picom -b
+
 #nm-applet &
 
 
