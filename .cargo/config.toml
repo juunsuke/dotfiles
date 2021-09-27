@@ -1,0 +1,10 @@
+[alias]
+b = "build"
+r = "run"
+br = "build --release"
+rr = "run --release"
+t = "test"
+
+[cargo-new]
+vcs = "none"
+
