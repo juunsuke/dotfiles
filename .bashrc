@@ -9,6 +9,7 @@ alias cp='cp -v'
 alias mv='mv -v'
 alias ls='ls --color -F'
 alias l='ls -la'
+alias vi=nvim
 
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
