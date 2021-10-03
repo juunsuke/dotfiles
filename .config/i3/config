@@ -30,7 +30,7 @@ font pango:monospace 16
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec alacritty
 
 # change modes
 bindsym $mod+F11 exec .config/mode1.sh
