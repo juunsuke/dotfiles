@@ -46,6 +46,9 @@ bindsym $mod+w exec google-chrome-stable --force-device-scale-factor=1.5
 # gyazo
 bindsym $mod+Shift+C exec gyazo
 
+# screenshot
+bindsym Print exec maim ~/Downloads/ss_$(date +%s).png
+
 # kill focused window
 bindsym $mod+q kill
 

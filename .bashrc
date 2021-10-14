@@ -14,3 +14,6 @@ alias vi=nvim
 alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 PS1='[\u@\h \W]\$ '
+
+export FZF_DEFAULT_COMMAND='fd --type f'
+

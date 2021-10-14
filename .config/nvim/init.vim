@@ -10,11 +10,11 @@ Plug 'itchyny/lightline.vim'
 Plug 'sainnhe/edge'
 
 " File management/browsing
-Plug 'preservim/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Syntax / Language
+Plug 'tikhomirov/vim-glsl'
 Plug 'cespare/vim-toml'
 Plug 'rust-lang/rust.vim'
 Plug 'neovim/nvim-lspconfig'
@@ -99,55 +99,56 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 )
 END
 
-" lua <<EOF
-"   -- Setup nvim-cmp.
-"   local cmp = require'cmp'
-" 
-"   cmp.setup({
-"     snippet = {
-"       expand = function(args)
-"         -- For `vsnip` user.
-"         --vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` user.
-" 
-"         -- For `luasnip` user.
-"         -- require('luasnip').lsp_expand(args.body)
-" 
-"         -- For `ultisnips` user.
-"         -- vim.fn["UltiSnips#Anon"](args.body)
-"       end,
-"     },
-"     mapping = {
-"       ['<C-d>'] = cmp.mapping.scroll_docs(-4),
-"       ['<C-f>'] = cmp.mapping.scroll_docs(4),
-"       ['<C-Space>'] = cmp.mapping.complete(),
-"       ['<C-e>'] = cmp.mapping.close(),
-"       ['<CR>'] = cmp.mapping.confirm({ select = true }),
-"     },
-"     sources = {
-"       { name = 'nvim_lsp' },
-" 
-"       -- For vsnip user.
-"       { name = 'vsnip' },
-" 
-"       -- For luasnip user.
-"       -- { name = 'luasnip' },
-" 
-"       -- For ultisnips user.
-"       -- { name = 'ultisnips' },
-" 
-"       { name = 'buffer' },
-"     }
-"   })
-" 
-"   -- Setup lspconfig.
-"   require('lspconfig')["rust_analyzer"].setup {
-"     capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
-"   }
-" EOF
+"lua <<EOF
+"  -- Setup nvim-cmp.
+"  local cmp = require'cmp'
+"
+"  cmp.setup({
+"    snippet = {
+"      expand = function(args)
+"        -- For `vsnip` user.
+"        --vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` user.
+"
+"        -- For `luasnip` user.
+"        -- require('luasnip').lsp_expand(args.body)
+"
+"        -- For `ultisnips` user.
+"        -- vim.fn["UltiSnips#Anon"](args.body)
+"      end,
+"    },
+"    mapping = {
+"      ['<C-d>'] = cmp.mapping.scroll_docs(-4),
+"      ['<C-f>'] = cmp.mapping.scroll_docs(4),
+"      ['<C-Space>'] = cmp.mapping.complete(),
+"      ['<C-e>'] = cmp.mapping.close(),
+"      ['<CR>'] = cmp.mapping.confirm({ select = true }),
+"      ['<tab>'] = cmp.mapping.confirm({ select = true }),
+"    },
+"    sources = {
+"      { name = 'nvim_lsp' },
+"
+"      -- For vsnip user.
+"      -- { name = 'vsnip' },
+"
+"      -- For luasnip user.
+"      -- { name = 'luasnip' },
+"
+"      -- For ultisnips user.
+"      -- { name = 'ultisnips' },
+"
+"      { name = 'buffer' },
+"    }
+"  })
+"
+"  -- Setup lspconfig.
+"  require('lspconfig')["rust_analyzer"].setup {
+"    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+"  }
+"EOF
 
 
 :set completeopt=menu,menuone,noinsert,noselect
-:set cmdheight=2
+:set cmdheight=1
 :set updatetime=300
 
 :syntax on
@@ -164,21 +165,17 @@ END
 :set indentexpr=""
 :set noshowmode
 :set signcolumn=yes
+:set nohlsearch
 :filetype indent off
 :filetype plugin off
 
 :set colorcolumn=120
 
-autocmd StdinReadPre * let s:std=in=1
-"autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | wincmd p | endif
-autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
-autocmd BufEnter * if bufname('#') =~ 'NERD_tree_\d\+' && bufname('%') !~ 'NERD_tree_\d\+' && winnr('$') > 1 | let buf=bufnr() | buffer# | execute "normal! \<C-W>w" | execute 'buffer'.buf | endif
-autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
-
-"nnoremap <C-f> :NERDTreeFocus<CR>
-"nnoremap <C-f> :NERDTreeToggle<CR>
 
 nnoremap <C-f> :Files<CR>
+
+nnoremap <C-Space> <C-x><C-o>
+inoremap <C-Space> <C-x><C-o>
 
 :set mouse=a
 :map <ScrollWheelUp> <C-Y>
