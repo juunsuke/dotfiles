@@ -1,0 +1,6 @@
+[user]
+	email = otajuun@gmail.com
+	name = Juun
+[alias]
+	ci = commit
+	st = status
