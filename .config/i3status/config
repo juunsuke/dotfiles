@@ -18,8 +18,8 @@ order += "cpu_usage"
 order += "cpu_temperature 0"
 order += "cpu_temperature 1"
 #order += "load"
-order += "tztime date"
-order += "tztime time"
+order += "time"
+#order += "time time"
 
 cpu_usage {
 		format = "<span color='#6090ff'>%usage</span>"
@@ -35,14 +35,8 @@ cpu_temperature 1 {
 		path = "/sys/class/drm/card0/device/hwmon/hwmon6/temp1_input"
 }
 
-tztime date {
-        format = "<span color='#FFFFFF'>%time</span>"
-        format_time = "%Y-%m-%d"
-}
-
-tztime time {
-        format = "<span color='#00FF00'>%time</span>"
-        format_time = "%H:%M"
+time {
+        format = "<span color='#808080'>%Y-%m-%d %H:%M</span>"
 }
 
 load {
