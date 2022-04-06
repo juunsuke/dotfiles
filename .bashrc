@@ -17,3 +17,5 @@ PS1='[\u@\h \W]\$ '
 
 export FZF_DEFAULT_COMMAND='fd --type f'
 
+export PATH="$PATH:~/.cargo/bin"
+
