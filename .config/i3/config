@@ -42,7 +42,7 @@ bindsym $mod+F1 exec setxkbmap us
 bindsym $mod+F2 exec "setxkbmap ca,fr"
 
 # Web browser
-bindsym $mod+w exec google-chrome-stable --force-device-scale-factor=1.5
+bindsym $mod+w exec google-chrome-stable --force-device-scale-factor=1.5 --force-dark-mode
 #bindsym $mod+w exec google-chrome-stable
 
 # gyazo

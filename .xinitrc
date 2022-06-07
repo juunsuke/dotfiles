@@ -17,6 +17,8 @@ picom -b
 
 #nm-applet &
 
+/opt/piavpn/bin/pia-client &
+
 
 i3
 
