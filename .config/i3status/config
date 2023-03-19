@@ -27,7 +27,8 @@ cpu_usage {
 
 cpu_temperature 0 {
 		format = "<span color='#ff6030'>%degrees °C</span>"
-		path = "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input"
+		path = "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon5/temp1_input"
+		#path = "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input"
 }
 
 cpu_temperature 1 {

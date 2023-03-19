@@ -15,7 +15,7 @@ pulseaudio -D
 
 picom -b
 
-#nm-applet &
+nm-applet &
 
 /opt/piavpn/bin/pia-client &
 
