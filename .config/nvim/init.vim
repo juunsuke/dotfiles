@@ -18,6 +18,7 @@ Plug 'tikhomirov/vim-glsl'
 Plug 'cespare/vim-toml'
 Plug 'rust-lang/rust.vim'
 Plug 'neovim/nvim-lspconfig'
+Plug 'ziglang/zig.vim'
 "Plug 'nvim-lua/completion-nvim'
 "Plug 'hrsh7th/cmp-nvim-lsp'
 "Plug 'hrsh7th/cmp-buffer'
@@ -176,6 +177,13 @@ nnoremap <C-f> :Files<CR>
 
 nnoremap <C-Space> <C-x><C-o>
 inoremap <C-Space> <C-x><C-o>
+
+nnoremap <S-Left> <C-PageUp>
+nnoremap <S-Right> <C-PageDown>
+
+inoremap <S-Left> <C-PageUp>
+inoremap <S-Right> <C-PageDown>
+
 
 :set mouse=a
 :map <ScrollWheelUp> <C-Y>

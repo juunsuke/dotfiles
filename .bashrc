@@ -17,5 +17,6 @@ PS1='[\u@\h \W]\$ '
 
 export FZF_DEFAULT_COMMAND='fd --type f'
 
-export PATH="$PATH:~/.cargo/bin"
+export PATH="/home/juun/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin:/home/juun/.zig/default:$PATH"
+
 
