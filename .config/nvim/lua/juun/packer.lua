@@ -12,6 +12,13 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
 
+	use {
+		'rebelot/terminal.nvim',
+		config = function()
+			require("terminal").setup()
+		end
+	}
+
 	use 'navarasu/onedark.nvim'
 	use 'sainnhe/edge'
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})

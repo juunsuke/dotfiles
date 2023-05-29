@@ -27,6 +27,12 @@ require('lspconfig').rust_analyzer.setup({
 	settings = {
 		["rust-analyzer"] = {
 			completion = {
+				postfix = {
+					enable = false
+				},
+				snippets = {
+					custom = {}
+				},
 				addCallParenthesis = false,
 				callable = {
 					snippets = "none"

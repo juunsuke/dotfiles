@@ -2,6 +2,7 @@
 local function setall(key, what)
 	vim.keymap.set("n", key, what)
 	vim.keymap.set("i", key, what)
+	vim.keymap.set("v", key, what)
 end
 
 setall("<C-x>", vim.cmd.Ex)
@@ -13,4 +14,10 @@ setall("<A-left>", "<C-PageUp>")
 setall("<A-right>", "<C-PageDown>")
 
 
+local function cargo_run()
+	local terminal = require("terminal")
+	terminal.run("cargo run", { autoclose = true })
+end
+
+setall("<F5>", cargo_run)
 
