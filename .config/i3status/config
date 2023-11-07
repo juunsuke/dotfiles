@@ -15,9 +15,10 @@ general {
 #order += "disk /"
 #order += "disk /z"
 order += "cpu_usage"
-#order += "cpu_temperature 0"
+order += "cpu_temperature 0"
 #order += "cpu_temperature 1"
 #order += "load"
+order += "battery 0"
 order += "time"
 #order += "time time"
 
@@ -28,7 +29,7 @@ cpu_usage {
 cpu_temperature 0 {
 		format = "<span color='#ff6030'>%degrees °C</span>"
 		#path = "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon5/temp1_input"
-		path = "/sys/devices/platform/coretemp.0/hwmon/hwmon5/temp1_input"
+		path = "/sys/devices/platform/coretemp.0/hwmon/hwmon6/temp1_input"
 }
 
 cpu_temperature 1 {
@@ -51,3 +52,9 @@ disk "/" {
 disk "/z" {
         format = "<span color='#7cffc2'>%avail</span>"
 }
+
+battery 0 {
+	integer_battery_capacity = true
+	format = "<span color='#f7ca88'>%status %percentage %remaining</span>"
+}
+

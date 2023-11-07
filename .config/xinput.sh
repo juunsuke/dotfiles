@@ -9,4 +9,7 @@ xinput set-prop "ASUE120D:00 04F3:31FB Touchpad" "libinput Middle Emulation Enab
 xinput set-prop "MX Ergo" "Coordinate Transformation Matrix" 2 0 0 0 2 0 0 0 1
 xinput set-prop "MX Ergo" "libinput Accel Speed" 1
 
+xinput set-prop "Logitech MX Ergo Multi-Device Trackball " "Coordinate Transformation Matrix" 2 0 0 0 2 0 0 0 1
+xinput set-prop "Logitech MX Ergo Multi-Device Trackball " "libinput Accel Speed" 1
+
 
