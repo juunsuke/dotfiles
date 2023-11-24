@@ -7,11 +7,11 @@ xset s 0
 xrdb -merge .Xresources
 
 #alttab -w 1 &
-#solaar -w hide &
+solaar -w hide &
 
 pulseaudio -D
 
-picom -b
+#picom -b
 
 nm-applet &
 
