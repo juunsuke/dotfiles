@@ -45,6 +45,7 @@ bindsym $mod+F2 exec "setxkbmap ca,fr"
 # Applications
 bindsym $mod+w exec firefox
 bindsym $mod+d exec dmenu_run
+bindsym $mod+s exec shafter
 
 # screenshot
 bindsym Print exec maim ~/.sshots/$(date +%s).png

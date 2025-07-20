@@ -11,7 +11,7 @@ xrdb -merge .Xresources
 
 pulseaudio -D
 
-#picom -b
+picom -b
 
 nm-applet &
 
