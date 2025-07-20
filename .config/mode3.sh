@@ -1,2 +1,2 @@
-xrandr --output DP-2 --mode 2560x1600 --rate 240 --output HDMI-0 --off
+xrandr --output eDP --mode 2880x1800 --rate 120 --output HDMI-A-0 --off
 nitrogen --restore

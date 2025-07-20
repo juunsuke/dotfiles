@@ -44,8 +44,6 @@ bindsym $mod+F2 exec "setxkbmap ca,fr"
 
 # Applications
 bindsym $mod+w exec firefox
-bindsym $mod+Shift+C exec gyazo
-bindsym $mod+e exec Thunar
 bindsym $mod+d exec dmenu_run
 
 # screenshot
@@ -58,6 +56,10 @@ bindsym $mod+q kill
 bindsym XF86AudioRaiseVolume exec ~/.bin/dvol_pulse -i 5
 bindsym XF86AudioLowerVolume exec ~/.bin/dvol_pulse -d 5
 bindsym XF86AudioMute exec ~/.bin/dvol_pulse -t
+
+# Brightness
+bindsym XF86MonBrightnessUp exec brightnessctl s +10%
+bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 # change focus
 bindsym $mod+Left focus left
