@@ -16,7 +16,7 @@ setall("<A-right>", "<C-PageDown>")
 
 local function cargo_run()
 	local terminal = require("terminal")
-	terminal.run("cargo run", { autoclose = true })
+	terminal.run("cargo run", { autoclose = false })
 end
 
 setall("<F5>", cargo_run)
