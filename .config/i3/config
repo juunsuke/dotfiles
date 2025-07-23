@@ -59,8 +59,8 @@ bindsym XF86AudioLowerVolume exec ~/.bin/dvol_pulse -d 5
 bindsym XF86AudioMute exec ~/.bin/dvol_pulse -t
 
 # Brightness
-bindsym XF86MonBrightnessUp exec brightnessctl s +10%
-bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
+bindsym XF86MonBrightnessUp exec brightnessctl s +10% && ~/.bin/print_brightness
+bindsym XF86MonBrightnessDown exec brightnessctl s 10%- && ~/.bin/print_brightness
 
 # change focus
 bindsym $mod+Left focus left

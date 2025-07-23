@@ -1,0 +1,25 @@
+#!/bin/bash
+
+#Customize this stuff
+SECS="1"
+PIPE="/tmp/printbrightpipe"
+
+FONT="Dina"
+BG="grey"
+FG="black"
+XPOS="10"
+YPOS="10"
+WIDTH="330"
+
+BRI="$(brightnessctl | grep Current | awk -F'[()%]' '{print $2}')"
+LINE="$(echo $BRI | dbar)"
+
+if [ ! -e "$PIPE" ]; then
+  mkfifo "$PIPE"
+  (dzen2 -l 1 -x "$XPOS" -y "$YPOS" -w "$WIDTH" -fn "$FONT" -bg "$BG" -fg "$FG" -e 'onstart=uncollapse' < "$PIPE" 
+   rm -f "$PIPE") &
+fi
+
+#Feed the pipe!
+(echo "Brightness" ; echo "$LINE" ; sleep "$SECS") > "$PIPE"
+
